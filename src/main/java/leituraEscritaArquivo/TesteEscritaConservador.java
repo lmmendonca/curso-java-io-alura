@@ -1,3 +1,5 @@
+package leituraEscritaArquivo;
+
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;

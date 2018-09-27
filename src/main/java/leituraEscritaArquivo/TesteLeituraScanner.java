@@ -1,3 +1,5 @@
+package leituraEscritaArquivo;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,7 +13,7 @@ public class TesteLeituraScanner {
     public static void main(String[] args) throws IOException {
 
         //Serve para ler linha por linha
-        Scanner scanner = new Scanner(new File("contas.csv"));
+        Scanner scanner = new Scanner(new File("contas.csv"), "UTF-8");
 
 
         while (scanner.hasNextLine()) {
