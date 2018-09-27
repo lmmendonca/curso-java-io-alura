@@ -1,0 +1,9 @@
+#Arquivo .gitignore para ignorar os arquivos  indesejados no repositorio.
+
+.idea/
+.idea
+.out/
+out
+
+target/
+target
