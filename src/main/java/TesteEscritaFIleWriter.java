@@ -7,6 +7,8 @@ public class TesteEscritaFIleWriter {
 
     public static void main(String[] args) throws IOException {
 
+        long ini = System.currentTimeMillis();
+
 //        OutputStream ots = new FileOutputStream("lorem2.txt");
 //        Writer writer = new OutputStreamWriter(ots);
 //        BufferedWriter bufferedWriter = new BufferedWriter(writer);
@@ -20,5 +22,7 @@ public class TesteEscritaFIleWriter {
         bufferedWriter.write("asdasdasdasdasd");
 
         bufferedWriter.close();
+
+        System.out.println(System.currentTimeMillis() - ini);
     }
 }
