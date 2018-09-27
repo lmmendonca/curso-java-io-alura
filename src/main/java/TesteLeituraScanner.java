@@ -1,7 +1,9 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Locale;
+import java.util.Properties;
 import java.util.Scanner;
 
 public class TesteLeituraScanner {
@@ -30,7 +32,7 @@ public class TesteLeituraScanner {
             // Impressao Formatada
             //%s = abreviacao de String
             //https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
-            System.out.format(new Locale("pt", "BR"),"%s, %04d-%010d, %20s, %05.2f", tipoConta,
+            System.out.format(new Locale("pt", "BR"), "%s, %04d-%010d, %20s, %05.2f", tipoConta,
                     agencia, numero, titular, saldo);
 
 
@@ -44,9 +46,7 @@ public class TesteLeituraScanner {
 //            System.out.println(valores[1]);
         }
 
-
         scanner.close();
-
 
     }
 }
