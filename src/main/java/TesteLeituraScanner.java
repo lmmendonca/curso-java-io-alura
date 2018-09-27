@@ -12,32 +12,37 @@ public class TesteLeituraScanner {
         Scanner scanner = new Scanner(new File("contas.csv"));
 
 
-        while (scanner.hasNextLine()){
+        while (scanner.hasNextLine()) {
             String linha = scanner.nextLine();
             System.out.println(linha);
 
+//            Parse com Scanner
             Scanner linhaScanner = new Scanner(linha);
             linhaScanner.useLocale(Locale.US);
             linhaScanner.useDelimiter(",");
 
-            String valor1 = linhaScanner.next();
-            Integer valor2 = linhaScanner.nextInt();
-            Integer valor3 = linhaScanner.nextInt();
-            String valor4 = linhaScanner.next();
-            Double valor5 = linhaScanner.nextDouble();
+            String tipoConta = linhaScanner.next();
+            Integer agencia = linhaScanner.nextInt();
+            Integer numero = linhaScanner.nextInt();
+            String titular = linhaScanner.next();
+            Double saldo = linhaScanner.nextDouble();
 
-            System.out.println(valor1 + valor2 + valor3 + valor4 + valor5);
+            // Impressao Formatada
+            //%s = abreviacao de String
+            //https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
+            System.out.format(new Locale("pt", "BR"),"%s, %04d-%010d, %20s, %05.2f", tipoConta,
+                    agencia, numero, titular, saldo);
+
 
             linhaScanner.close();
 
-//
+//            Pardrao parse em String:
 //            String[] valores = linha.split(",");
 //
 //            System.out.println(Arrays.toString(valores));
 //
 //            System.out.println(valores[1]);
         }
-
 
 
         scanner.close();
